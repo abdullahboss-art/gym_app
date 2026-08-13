@@ -4,7 +4,7 @@
     "slug": "gym",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/image/icon.png",
     "scheme": "gym",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -12,31 +12,42 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.abdullah03.gym",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/image/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
       },
-      "edgeToEdgeEnabled": true
+      "softwareKeyboardLayoutMode": "pan"
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/image/favicon.png"
+    },
+    "splash": {
+      "image": "./assets/image/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
     },
     "plugins": [
-      "expo-router",
       [
-        "expo-splash-screen",
+        "expo-router",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "origin": "https://gym.com"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": "https://gym.com"
+      },
+      "eas": {
+        "projectId": "c61f3ff2-63be-4462-aefa-d79641b251c8"
+      }
+    },
+    "assetBundlePatterns": ["**/*"]
   }
 }
